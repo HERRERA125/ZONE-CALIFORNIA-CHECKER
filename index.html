@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detector de Zonas de California</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🌴 Detector de Zonas de California</h1>
+
+      <form id="formulario" onsubmit="event.preventDefault(); buscarZona();">
+        <input
+          type="text"
+          id="direccion"
+          placeholder="Ingresa una dirección en California..."
+          required
+        />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <div id="zona" class="card hidden"></div>
+      <div id="mapa" class="map hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+407
