@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>California Zone Checker 2.2</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>California Zone Checker <span class="pill">2.2</span></h1>
+    <p class="subtitle">Zonas definidas por franjas latitudinales (Sacramento = Norte, Fresno = Central, LA–Calexico = Sur).</p>
+
+    <div class="search">
+      <input id="direccion" type="text" placeholder="Ej: 6324 Rhonda Way Bakersfield, CA 93307" />
+      <button id="buscar" type="button">Buscar zona</button>
+    </div>
+
+    <section id="zona" class="hidden"></section>
+    <section id="mapa" class="hidden"></section>
+
+    <details class="note">
+      <summary>Config de zonas (click para ver)</summary>
+      <p>Reglas actuales: <code>Norte: lat ≥ 37.9</code>, <code>Central: 34.7 ≤ lat &lt; 37.9</code>, <code>Sur: lat &lt; 34.7</code>.</p>
+      <p>Overrides de condado (si aplica): <code>kern → Zona Central</code>.</p>
+      <p>Para producción, mueve tu clave de OpenCage a un <b>backend/proxy</b> y no la expongas en el frontend.</p>
+    </details>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
